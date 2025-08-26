@@ -20,40 +20,40 @@ export default function App() {
     program: ''
   });
 
-  // Enhanced kindergarten images for slider
-  const kindergartenImages = [
-    {
-      url: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "Ruang Kelas yang Nyaman & Modern",
-      description: "Lingkungan belajar yang kondusif dengan fasilitas multimedia untuk pembelajaran interaktif"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "Pembelajaran Aktif & Menyenangkan",
-      description: "Metode pembelajaran berbasis aktivitas yang mengembangkan kreativitas dan kecerdasan anak"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "Bermain Sambil Belajar",
-      description: "Kombinasi sempurna antara fun learning dan pencapaian target pembelajaran efektif"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1560785496-3c9d27877182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "Playground & Fasilitas Olahraga",
-      description: "Area bermain yang aman dan lengkap untuk mengembangkan motorik kasar anak"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "Seni, Kreativitas & Kerajinan",
-      description: "Studio seni lengkap untuk mengasah bakat dan kreativitas melalui berbagai kegiatan artistik"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      title: "Kegiatan Islami & Character Building",
-      description: "Program tahfidz, sholat berjamaah, dan pembentukan akhlak mulia dalam kehidupan sehari-hari"
-    }
-  ];
-
+// Enhanced kindergarten images for slider
+// Enhanced kindergarten images for slider
+const kindergartenImages = [
+  {
+    url: "src/assets/img/tk1.jpg",
+    title: "Fasilitas Multimedia Interaktif",
+    description: "Lingkungan belajar yang kondusif dengan fasilitas multimedia untuk pembelajaran interaktif"
+  },
+  {
+    url: "src/assets/img/tk2.jpg",
+    title: "Pembelajaran Aktif & Menyenangkan",
+    description: "Metode pembelajaran berbasis aktivitas yang mengembangkan kreativitas dan kecerdasan anak"
+  },
+  {
+    url: "src/assets/img/tk3.jpg",
+    title: "Bermain Sambil Belajar",
+    description: "Kombinasi sempurna antara fun learning dan pencapaian target pembelajaran efektif"
+  },
+  {
+    url: "src/assets/img/tk4.jpg",
+    title: "Playground & Fasilitas Olahraga",
+    description: "Area bermain yang aman dan lengkap untuk mengembangkan motorik kasar anak"
+  },
+  {
+    url: "src/assets/img/tk5.jpg",
+    title: "Seni, Kreativitas & Kerajinan",
+    description: "Studio seni lengkap untuk mengasah bakat dan kreativitas melalui berbagai kegiatan artistik"
+  },
+  {
+    url: "src/assets/img/tk6.jpg",
+    title: "Kegiatan Islami & Character Building",
+    description: "Program tahfidz, sholat berjamaah, dan pembentukan akhlak mulia dalam kehidupan sehari-hari"
+  }
+];
   // Auto slide functionality
   useEffect(() => {
     const slideInterval = setInterval(() => {
@@ -95,7 +95,7 @@ const handleSubmit = async (e) => {
         'Content-Type': 'application/json',
       },
     });
-    if (response.status === 200) {
+    if (response.status === 201) {
       setSubmitStatus('success');
     } else {
       setSubmitStatus('error');
@@ -195,7 +195,7 @@ const handleSubmit = async (e) => {
   const achievements = [
     { icon: Trophy, title: "Juara 1 Lomba Tahfidz", desc: "Tingkat Kabupaten Siak 2024", color: "yellow" },
     { icon: Award, title: "Sekolah Adiwiyata", desc: "Peduli Lingkungan 2023-2024", color: "green" },
-    { icon: Star, title: "Akreditasi A", desc: "Dari Dinas Pendidikan Riau", color: "blue" },
+    { icon: Star, title: "Akreditasi B", desc: "Dari Dinas Pendidikan Kab.BOGOR", color: "blue" },
     { icon: Target, title: "ISO 9001:2015", desc: "Standar Manajemen Mutu", color: "purple" }
   ];
 
@@ -368,7 +368,7 @@ const handleSubmit = async (e) => {
                     <div className="text-sm text-gray-600">Kepuasan</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">15</div>
+                    <div className="text-2xl font-bold text-purple-600">3</div>
                     <div className="text-sm text-gray-600">Guru Ahli</div>
                   </div>
                 </div>
@@ -1201,7 +1201,7 @@ const handleSubmit = async (e) => {
                             Terima kasih telah mendaftar di TKIT Ar-Rahman. Tim kami akan menghubungi Anda dalam 1x24 jam.
                           </div>
                           <div className="text-sm text-green-600">
-                            📞 Jika ada pertanyaan mendesak, hubungi: <span className="font-bold">0812-3456-7890</span>
+                            📞 Jika ada pertanyaan mendesak, hubungi: <span className="font-bold">085810111004</span>
                           </div>
                         </div>
                       </div>
@@ -1220,8 +1220,8 @@ const handleSubmit = async (e) => {
                             Terjadi kendala teknis. Silakan coba lagi atau hubungi kami langsung.
                           </div>
                           <div className="text-sm text-red-600">
-                            📞 Hubungi: <span className="font-bold">0812-3456-7890</span> | 
-                            📧 Email: <span className="font-bold">info@tkitarrahman-bida.sch.id</span>
+                            📞 Hubungi: <span className="font-bold">085810111004</span> | 
+                            📧 Email: <span className="font-bold">tarraahman00@gmail.com</span>
                           </div>
                         </div>
                       </div>
@@ -1700,11 +1700,11 @@ const handleSubmit = async (e) => {
                         <div className="flex flex-col gap-2 text-sm">
                           <div className="flex items-center justify-center gap-2">
                             <Phone className="w-4 h-4" />
-                            <span className="font-bold">0812-3456-7890</span>
+                            <span className="font-bold">085810111004</span>
                           </div>
                           <div className="flex items-center justify-center gap-2">
                             <Mail className="w-4 h-4" />
-                            <span className="font-bold">info@tkitarrahman-bida.sch.id</span>
+                            <span className="font-bold">tarraahman00@gmail.com</span>
                           </div>
                         </div>
                       </div>
@@ -1773,14 +1773,14 @@ const handleSubmit = async (e) => {
                   <Phone className="w-5 h-5 text-emerald-200" />
                   <div>
                     <div className="font-semibold text-emerald-100">Telepon:</div>
-                    <span className="text-sm text-emerald-100">0812-3456-7890</span>
+                    <span className="text-sm text-emerald-100">085810111004</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-emerald-200" />
                   <div>
                     <div className="font-semibold text-emerald-100">Email:</div>
-                    <span className="text-sm text-emerald-100">info@tkitarrahman-bida.sch.id</span>
+                    <span className="text-sm text-emerald-100">tarraahman00@gmail.com</span>
                   </div>
                 </div>
               </div>
