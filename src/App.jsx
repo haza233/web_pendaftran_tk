@@ -334,7 +334,7 @@ const handleSubmit = async (e) => {
                   <div className="flex items-center gap-6 text-sm">
                     <div className="flex items-center gap-2 text-emerald-600 font-semibold">
                       <Award className="w-5 h-5" />
-                      Akreditasi A
+                      Akreditasi B
                     </div>
                     <div className="flex items-center gap-2 text-blue-600 font-semibold">
                       <Users className="w-5 h-5" />
