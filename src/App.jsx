@@ -96,14 +96,23 @@ const handleSubmit = async (e) => {
     });
     if (response.status === 201) {
       setSubmitStatus('success');
-    } else {
+    } 
+    else if (response.status === 400) {
+      setSubmitStatus('email_exists');
+    } 
+      else if (response.status === 401) {
+      setSubmitStatus('null');
+      }
+    else {
       setSubmitStatus('error');
     }
-  } catch (error) {
+  
+  } catch (error) { 
     console.error('Error message:', error.message);  // Logs specific error message
     if (error.response) {
       console.error('Response data:', error.response.data);  // Logs the response data
-      setSubmitStatus('error');
+      setSubmitStatus(error.response.data.message === 'Email sudah terdaftar, gunakan email lain.');
+       setSubmitStatus('email_exists');
     } else if (error.request) {
       console.error('Request data:', error.request);  // Logs request data if no response
       setSubmitStatus('error');
@@ -1215,6 +1224,44 @@ const handleSubmit = async (e) => {
                         </div>
                         <div>
                           <div className="font-bold text-xl text-red-800 mb-2">❌ Gagal Mengirim Pendaftaran</div>
+                          <div className="text-red-700 mb-2">
+                            Terjadi kendala teknis. Silakan coba lagi atau hubungi kami langsung.
+                          </div>
+                          <div className="text-sm text-red-600">
+                            📞 Hubungi: <span className="font-bold">085810111004</span> | 
+                            📧 Email: <span className="font-bold">tarraahman00@gmail.com</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                    {submitStatus === 'email_exists' && (
+                    <div className="mb-8 p-6 bg-gradient-to-r from-red-50 to-pink-50 border-2 border-red-200 rounded-2xl">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center">
+                          <AlertCircle className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <div className="font-bold text-xl text-red-800 mb-2">❌ Sudah Terdaftar Email</div>
+                          <div className="text-red-700 mb-2">
+                            Terjadi kendala teknis. Silakan coba lagi atau hubungi kami langsung.
+                          </div>
+                          <div className="text-sm text-red-600">
+                            📞 Hubungi: <span className="font-bold">085810111004</span> | 
+                            📧 Email: <span className="font-bold">tarraahman00@gmail.com</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {submitStatus === 'null' && (
+                    <div className="mb-8 p-6 bg-gradient-to-r from-red-50 to-pink-50 border-2 border-red-200 rounded-2xl">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center">
+                          <AlertCircle className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <div className="font-bold text-xl text-red-800 mb-2">❌ Data tidak boleh kosong</div>
                           <div className="text-red-700 mb-2">
                             Terjadi kendala teknis. Silakan coba lagi atau hubungi kami langsung.
                           </div>
