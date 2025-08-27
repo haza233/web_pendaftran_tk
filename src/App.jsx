@@ -96,6 +96,12 @@ const handleSubmit = async (e) => {
     });
     if (response.status === 201) {
       setSubmitStatus('success');
+      
+  // refresh halaman
+  window.location.reload();
+
+  // atau kalau cuma mau refresh data list tanpa reload full
+  fetchData(); // function untuk ngambil ulang data dari API
     } 
     else if (response.status === 400) {
       setSubmitStatus('email_exists');
